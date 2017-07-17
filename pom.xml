@@ -21,7 +21,6 @@
             <version>7.0</version>
             <scope>provided</scope>
             
-        <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-dependency-plugin</artifactId>
     <version>2.3</version>
@@ -45,7 +44,7 @@
         </configuration>
       </execution>
     </executions>
-  </plugin>         
+  
             
         </dependency>
     </dependencies>
