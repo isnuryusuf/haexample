@@ -1,5 +1,7 @@
+---
 # haexample
 HA with EAP example for openshift
+---
 
 oc cluster up --metrics
 oc delete project haexample
@@ -11,12 +13,12 @@ oc new-app --image-stream="openshift/jboss-eap70-openshift:latest" https://githu
 oc env dc/haexample -e OPENSHIFT_KUBE_PING_NAMESPACE=haexample OPENSHIFT_KUBE_PING_LABELS=app=haexample
 
 
----
+`
 16:53:27,629 FINE  [org.openshift.ping.kube.Client] (thread-3,ee,haexample-1-rt1xj) getPods(haexample, app=haexample) = [Pod[podIP=172.17.0.18, containers=[Container[ports=[]]]]]
----
+`
 
 
-
+`
           ports:
             - containerPort: 8080
               protocol: TCP
@@ -27,7 +29,7 @@ oc env dc/haexample -e OPENSHIFT_KUBE_PING_NAMESPACE=haexample OPENSHIFT_KUBE_PI
             - name: ping
               containerPort: 8888
               protocol: TCP
-
+`
 
 Scale to 2
 oc expose service haexample --name haexample
