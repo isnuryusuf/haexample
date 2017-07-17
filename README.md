@@ -1,5 +1,4 @@
 # haexample
 HA with EAP example for openshift
 
-See my blog entry for details of this project and how I used it
-todo add blog link
+![alt text](https://raw.githubusercontent.com/isnuryusuf/haexample/master/edb-redhat.png)
