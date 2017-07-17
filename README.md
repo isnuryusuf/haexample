@@ -35,5 +35,8 @@ HA with EAP example for openshift
 8. oc expose service haexample --name haexample
 9. oc get svc
 
+List Cluster Example App: https://github.com/isnuryusuf/cluster-app-example
+
+** Yusuf Hadiwinata Sutandar**
 
 ![alt text](https://raw.githubusercontent.com/isnuryusuf/haexample/master/edb-redhat.png)
