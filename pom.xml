@@ -16,21 +16,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
-            <version>7.0</version>
-            <scope>provided</scope>
-            
-
-  
-            
-        </dependency>
-    </dependencies>
- 
-
-        <build>
-        <plugins>
-            <plugin>
+  <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-dependency-plugin</artifactId>
     <version>2.3</version>
@@ -54,16 +40,21 @@
         </configuration>
       </execution>
     </executions>
+  </plugin>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
             </plugin>
-            
-            
         </plugins>
-            
-            
-            
     </build>
-    
-
 
     <profiles>
         <profile>
