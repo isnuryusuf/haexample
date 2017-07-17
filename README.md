@@ -34,6 +34,11 @@ HA with EAP example for openshift
 7. Scale to 2
 8. oc expose service haexample --name haexample
 9. oc get svc
+10. while true; do curl -s  http://haexample-haexample.smartfintech.i3-cloud.com/haexample  | grep "haexample" | cut -c 55-95; sleep 2; done
+
+
+11. for i in {1..500}; do curl http://haexample-haexample.smartfintech.i3-cloud.com/haexample ; done;
+
 
 List Cluster Example App: https://github.com/isnuryusuf/cluster-app-example
 
