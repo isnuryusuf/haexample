@@ -35,9 +35,10 @@ HA with EAP example for openshift
 8. oc expose service haexample --name haexample
 9. oc get svc
 10. while true; do curl -s  http://haexample-haexample.smartfintech.i3-cloud.com/haexample  | grep "haexample" | cut -c 55-95; sleep 2; done
-
-
-11. for i in {1..500}; do curl http://haexample-haexample.smartfintech.i3-cloud.com/haexample ; done;
+11. oc create -f limits.json -n haexample
+12. oc describe limits mylimits
+13. oc autoscale dc/haexample --min 1 --max 4 --cpu-percent=25
+14. for i in {1..500}; do curl http://haexample-haexample.smartfintech.i3-cloud.com/haexample ; done;
 
 
 List Cluster Example App: https://github.com/isnuryusuf/cluster-app-example
