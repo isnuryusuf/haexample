@@ -3,14 +3,14 @@
 HA with EAP example for openshift
 ---
 
-oc cluster up --metrics
-oc delete project haexample
-oc new-project haexample
-oc policy add-role-to-user view system:serviceaccount:haexample:default -n haexample
+1. oc cluster up --metrics
+2. oc delete project haexample
+3. oc new-project haexample
+4. oc policy add-role-to-user view system:serviceaccount:haexample:default -n haexample
 
-oc new-app --image-stream="openshift/jboss-eap70-openshift:latest" https://github.com/isnuryusuf/haexample#master --name='haexample' -l name='haexample' -e SELECTOR=haexample -e OPENSHIFT_KUBE_PING_NAMESPACE=haexample OPENSHIFT_KUBE_PING_LABELS=app=haexample 
+5. oc new-app --image-stream="openshift/jboss-eap70-openshift:latest" https://github.com/isnuryusuf/haexample#master --name='haexample' -l name='haexample' -e SELECTOR=haexample -e OPENSHIFT_KUBE_PING_NAMESPACE=haexample OPENSHIFT_KUBE_PING_LABELS=app=haexample 
 
-oc env dc/haexample -e OPENSHIFT_KUBE_PING_NAMESPACE=haexample OPENSHIFT_KUBE_PING_LABELS=app=haexample
+6. oc env dc/haexample -e OPENSHIFT_KUBE_PING_NAMESPACE=haexample OPENSHIFT_KUBE_PING_LABELS=app=haexample
 
 
 `
@@ -31,9 +31,9 @@ oc env dc/haexample -e OPENSHIFT_KUBE_PING_NAMESPACE=haexample OPENSHIFT_KUBE_PI
               protocol: TCP
 `
 
-Scale to 2
-oc expose service haexample --name haexample
-oc get svc
+7. Scale to 2
+8. oc expose service haexample --name haexample
+9. oc get svc
 
 
 ![alt text](https://raw.githubusercontent.com/isnuryusuf/haexample/master/edb-redhat.png)
