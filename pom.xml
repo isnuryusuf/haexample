@@ -45,7 +45,8 @@
               <version>3.8.1</version>
               <type>jar</type>
               <overWrite>false</overWrite>
-              <outputDirectory>${project.build.directory}/alternateLocation</outputDirectory>
+              <!-- <outputDirectory>${project.build.directory}/alternateLocation</outputDirectory> -->
+              <outputDirectory>${project.build.directory}</outputDirectory>
               <destFileName>cluster-demo.war</destFileName>
             </artifactItem>
           </artifactItems>
