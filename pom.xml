@@ -26,12 +26,13 @@
         <plugins>
             <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
+        <-- <artifactId>maven-dependency-plugin</artifactId> -->
+        <artifactId>copy-with-alternalte-repo</artifactId>
         <version>3.0.1</version>
         <executions>
           <execution>
             <id>copy</id>
-            <phase>package</phase>
+            <phase>install</phase>
             <goals>
               <goal>copy</goal>
             </goals>
