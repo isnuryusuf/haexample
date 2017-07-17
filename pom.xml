@@ -27,7 +27,7 @@
             <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <!-- <artifactId>maven-dependency-plugin</artifactId> -->
-        <artifactId>copy-with-alternalte-repo</artifactId>
+        <artifactId>maven-dependency-plugin</artifactId>
         <version>3.0.1</version>
         <executions>
           <execution>
@@ -41,7 +41,7 @@
         <configuration>
           <artifactItems>
             <artifactItem>
-              <groupId>net.bluedash</groupId>
+              <groupId>cluster-demo</groupId>
               <artifactId>cluster-demo</artifactId>
               <version>1.0-SNAPSHOT</version>
               <type>war</type>
