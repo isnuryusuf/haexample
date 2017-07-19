@@ -3,8 +3,7 @@
 HA with EAP example for openshift
 ---
 
-For installing Openshift please visit: 
-0. https://github.com/isnuryusuf/openshift-install/blob/master/openshift-origin-quickstart.md
+For installing Openshift please refer to: https://github.com/isnuryusuf/openshift-install/blob/master/openshift-origin-quickstart.md
 1. oc cluster up --metrics
 2. oc delete project haexample
 3. oc new-project haexample
